@@ -1,0 +1,79 @@
+@import "./variabels";
+.shipper_content {
+  padding-top: 70px;
+  p {
+    font-size: 1rem;
+    line-height: 30px;
+    color: #777;
+  }
+}
+
+.shipper_title {
+  font-size: 2.5rem;
+  line-height: 55px;
+  span {
+    color: $primary;
+  }
+}
+
+.shipper_btns {
+  button {
+    border: none;
+    outline: none;
+    padding: 7px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 600;
+  }
+}
+.shipper_service {
+  p {
+    color: #212245;
+    font-weight: 600;
+    font-size: 0.9rem;
+  }
+}
+
+.shipping_icon {
+  .i {
+    padding: 5px;
+    width: 30px;
+    height: 30px;
+    background: $primary;
+    color: #fff;
+    border-radius: 50%;
+  }
+}
+
+.order_btn,
+.all_foods-btn {
+  background: transparent;
+  color: $primary;
+  transition: 0.3s;
+  border: 1px solid $primary !important;
+  &:hover {
+    background: $primary;
+    color: white;
+  }
+  a {
+    &:hover {
+      color: white;
+    }
+  }
+}
+@media only screen and (max-width: 768px) {
+  .shipper_title {
+    font-size: 2rem;
+    line-height: 45px;
+  }
+  .shipper_img {
+    padding-top: 50px;
+  }
+  .shipper_service {
+    p {
+      color: #212245;
+      font-weight: 600;
+      font-size: 0.7rem;
+    }
+  }
+}

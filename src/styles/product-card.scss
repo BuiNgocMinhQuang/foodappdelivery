@@ -1,0 +1,84 @@
+@import "./variabels";
+.product_item {
+  background: #fff;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  text-align: center;
+  padding: 30px;
+  position: relative;
+  height: 165px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.5s;
+  &:hover {
+    transform: scale(1.1);
+  }
+  img {
+    width: 135px;
+    height: 125px;
+  }
+}
+
+.product_img {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+}
+
+.product_content {
+  position: absolute;
+  right: 5%;
+  bottom: 5%;
+  h5 {
+    a {
+      color: #212245;
+      font-size: 1rem;
+    }
+  }
+}
+
+.product_price {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: $primary;
+}
+
+.addtocart_btn {
+  position: absolute;
+  right: 5%;
+  border: none;
+  background: $main-red;
+  color: #fff;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  padding: 5px 10px;
+}
+
+@media only screen and (max-width: 768px) {
+  .product_content {
+    h5 {
+      a {
+        font-size: 0.9rem;
+      }
+    }
+  }
+  .product_item {
+    padding: 20px;
+    img {
+      width: 120px;
+      height: 100px;
+    }
+  }
+  .addtocart_btn {
+    padding: 5px 15px;
+    font-size: 0.7rem;
+  }
+}
+@media only screen and (max-width: 390px) {
+  .addtocart_btn {
+    padding: 5px 10px;
+    font-size: 0.7rem;
+  }
+  .net-img {
+    padding-top: 50px;
+  }
+}

@@ -1,0 +1,140 @@
+@import "./variabels";
+.header {
+  width: 100%;
+  height: 100%;
+  position: sticky;
+  top: 0;
+  left: 0;
+  background: #fff;
+  z-index: 99999;
+}
+
+.logo {
+  padding: 10px 0;
+
+  img {
+    width: 120px;
+    object-fit: cover;
+  }
+}
+
+.menu {
+  a {
+    font-weight: 600;
+    font-size: 1.3rem;
+    color: $text-color;
+    transition: 0.3s;
+    &:hover {
+      color: $primary;
+    }
+  }
+}
+.active_menu {
+  color: $primary !important;
+}
+.cart_icon,
+.user,
+.moible_menu {
+  font-size: 1.3em;
+  color: $text-color;
+  cursor: pointer;
+}
+.cart_icon {
+  position: relative;
+}
+.cart_badge {
+  position: absolute;
+  top: 0;
+  right: -10px;
+  background: #df2020;
+  color: #fff;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  font-size: 0.8rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mobile_menu {
+  font-weight: 600;
+  display: none;
+}
+
+@media only screen and (max-width: 768px) {
+  .navigation {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.425);
+    z-index: 99;
+    display: none;
+  }
+
+  .menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 250px;
+    height: 100%;
+    background: #fff;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+    line-height: 20px;
+  }
+
+  .menu a {
+    a {
+      font-size: 1rem;
+    }
+  }
+
+  .mobile_menu {
+    display: block;
+  }
+
+  .cart_icon i,
+  .user i,
+  .mobile_menu i {
+    font-size: 1rem;
+  }
+
+  .show_menu {
+    display: block;
+  }
+}
+
+@media only screen and (max-width: 390px) {
+  .navigation {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.425);
+    z-index: 99;
+    display: none;
+  }
+  .logo {
+    padding: 10px 0;
+    text-align: center;
+    align-items: center;
+    img {
+      width: 50px;
+      object-fit: cover;
+    }
+  }
+  .menu {
+    width: 100%;
+    height: 100%;
+  }
+  .show_menu {
+    display: block;
+  }
+}

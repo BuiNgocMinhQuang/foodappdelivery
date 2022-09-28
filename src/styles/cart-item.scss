@@ -1,0 +1,53 @@
+@import "./variabels";
+.cart_item-info {
+  background-color: #2e3033;
+  padding: 5px;
+  border-radius: 10px;
+  img {
+    width: 70px;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .cart_product-title {
+    font-size: 0.7rem;
+    font-weight: 600;
+    max-width: 100px;
+    color: white;
+  }
+
+  .cart_product-price {
+    font-size: 0.8rem;
+    span {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: white;
+    }
+  }
+
+  .increase_decrease-btn {
+    color: white;
+    padding: 5px;
+  }
+
+  .increase_btn,
+  .decrease_btn {
+    padding: 5px;
+    cursor: pointer;
+    .quantity {
+      padding: 0 10px;
+    }
+  }
+
+  .delete_btn {
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .delete_btn {
+    font-size: 1rem;
+  }
+}

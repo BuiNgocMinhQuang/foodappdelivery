@@ -1,0 +1,67 @@
+import React from "react";
+
+import { ListGroup } from "reactstrap";
+import { Link } from "react-router-dom";
+import CartItem from "./CartItem";
+import { useDispatch, useSelector } from "react-redux";
+import { cartUiActions } from "../../../store/shopping-cart/cartUiSlice";
+import { BiArrowBack } from "react-icons/bi";
+import { AiOutlineClear } from "react-icons/ai";
+import "../../../styles/shopping-cart.scss";
+import { cartActions } from "../../../store/shopping-cart/cartSlice";
+const Carts = () => {
+  const dispatch = useDispatch();
+  const cartProducts = useSelector((state) => state.cart.cartItems);
+  const totalAmount = useSelector((state) => state.cart.totalAmount);
+
+  const toggleCart = () => {
+    dispatch(cartUiActions.toggle());
+  };
+
+  const clearCart = () => {
+    dispatch(cartActions.deleteItem());
+  };
+
+  return (
+    <div className="cart_container">
+      <ListGroup className="cart">
+        <div className="cart_close d-flex justify-content-between align-items-center">
+          <span onClick={toggleCart}>
+            <BiArrowBack />
+          </span>
+          <span>Cart</span>
+          <span
+            className="d-flex align-items-center clear-btn"
+            onClick={clearCart}
+          >
+            Clear
+            <AiOutlineClear />
+          </span>
+        </div>
+
+        <div className="cart_item-list">
+          {cartProducts.length === 0 ? (
+            <h6 className="text-center mt-5">No item added to the cart</h6>
+          ) : (
+            cartProducts.map((item, index) => (
+              <CartItem item={item} key={index} />
+            ))
+          )}
+        </div>
+
+        <div className="cart_bottom d-flex align-items-center justify-content-between">
+          <h6>
+            Subtotal : <span>${totalAmount}</span>
+          </h6>
+          <button>
+            <Link to="/checkout" onClick={toggleCart}>
+              Checkout
+            </Link>
+          </button>
+        </div>
+      </ListGroup>
+    </div>
+  );
+};
+
+export default Carts;

@@ -1,0 +1,141 @@
+@import "./variabels";
+.footer {
+  padding-top: 50px;
+  padding-bottom: 30px;
+  background: #fde4e4;
+}
+
+.footer_logo {
+  img {
+    width: 120px;
+    margin-bottom: 5px;
+  }
+  h5 {
+    font-weight: 600;
+    font-size: 1rem;
+    margin-bottom: 15px;
+  }
+  p {
+    font-size: 0.9rem;
+    color: #333;
+    line-height: 28px;
+  }
+}
+
+.delivery_time-item {
+  background: transparent !important;
+  span {
+    font-weight: 600;
+    font-size: 1rem;
+    color: $text-color;
+  }
+  p {
+    color: $text-color;
+  }
+}
+
+.footer_title {
+  font-size: 1.1rem;
+  color: $text-color;
+  font-weight: 600;
+}
+
+.newsletter {
+  padding: 5px;
+  border: 1px solid $text-color;
+  border-radius: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  .send-icon {
+    color: white;
+  }
+  input {
+    background: transparent;
+    border: none;
+    outline: none;
+    &:focus {
+      outline: none;
+    }
+    &::placeholder {
+      color: $text-color;
+    }
+  }
+  span {
+    background: $primary;
+    padding: 5px 30px;
+    border-radius: 5px;
+    i {
+      color: #fff;
+    }
+  }
+}
+
+.follow-text {
+  font-weight: 600;
+  font-size: 1.2rem;
+  color: $text-color;
+}
+.social_links {
+  .icons {
+    background: $primary;
+    color: #fff;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    padding: 5px;
+  }
+}
+
+.copyright_text {
+  font-size: 0.8rem;
+  color: $primary;
+}
+
+@media only screen and (max-width: 992px) {
+  .newsletter {
+    input {
+      padding: 7px;
+      font-size: 0.7rem;
+    }
+    span {
+      padding: 4px 20px;
+      font-size: 0.7rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .footer_title {
+    font-size: 0.8rem;
+  }
+
+  .delivery_time-item {
+    span {
+      font-size: 0.8rem;
+    }
+    p {
+      font-size: 0.7rem;
+      margin-bottom: 0;
+    }
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .copyright_text {
+    text-align: center;
+  }
+
+  .social_links p {
+    p {
+      font-size: 0.8rem;
+    }
+    span {
+      padding: 4px;
+      a {
+        font-size: 0.7rem;
+      }
+    }
+  }
+}
